@@ -3,47 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Descargas Directas</title>
+  <title>Centro de Descargas</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: system-ui, -apple-system, sans-serif; background-color: #0f172a; color: #f8fafc; padding: 20px 10px; display: flex; justify-content: center; }
-    .container { width: 100%; max-width: 440px; background: #1e293b; padding: 20px 15px; border-radius: 12px; text-align: center; }
+    .container { width: 100%; max-width: 460px; background: #1e293b; padding: 20px 15px; border-radius: 12px; text-align: left; }
     
+    h1 { font-size: 20px; font-weight: 700; color: #ffffff; text-align: center; margin-bottom: 8px; }
+    
+    /* Nota de cuenta */
+    .notice-box { background: #334155; border-left: 4px solid #38bdf8; padding: 12px 14px; margin: 15px 0; border-radius: 6px; }
+    .notice-title { font-size: 14px; font-weight: 700; color: #38bdf8; margin-bottom: 6px; }
+    .notice-list { font-size: 13px; color: #cbd5e1; line-height: 1.5; padding-left: 18px; }
+
     /* Filas de Apps */
-    .app-row { display: flex; align-items: center; justify-content: space-between; background: #334155; padding: 14px 16px; margin: 10px 0; border-radius: 8px; }
+    .app-row { display: flex; align-items: center; justify-content: space-between; background: #334155; padding: 14px 16px; margin: 12px 0; border-radius: 8px; }
     .app-name { font-size: 16px; font-weight: 600; color: #ffffff; }
     .btn-download { background: #22c55e; color: #ffffff; text-decoration: none; padding: 10px 18px; border-radius: 6px; font-weight: bold; font-size: 14px; display: inline-block; }
     .btn-download:active { background: #16a34a; }
 
-    /* Espacios Fijos para Anuncios */
+    /* Espacios para Anuncios */
     .ad-slot { margin: 15px 0; min-height: 60px; display: flex; justify-content: center; align-items: center; background: #0f172a; border: 1px dashed #475569; border-radius: 6px; overflow: hidden; }
+
+    /* Preguntas Frecuentes */
+    .faq-section { margin-top: 25px; padding-top: 15px; border-top: 1px solid #334155; }
+    .faq-title { font-size: 16px; font-weight: 700; color: #38bdf8; margin-bottom: 12px; }
+    .faq-item { margin-bottom: 12px; }
+    .faq-question { font-size: 14px; font-weight: 600; color: #f1f5f9; margin-bottom: 4px; }
+    .faq-answer { font-size: 13px; color: #94a3b8; line-height: 1.4; }
   </style>
 </head>
 <body>
 
 <div class="container">
 
-  <!-- BANNER ANUNCIO TOP -->
+  <h1>Centro de Descargas</h1>
+
+  <!-- NOTA SOBRE LA CUENTA -->
+  <div class="notice-box">
+    <div class="notice-title">¿Y si no tengo cuenta?</div>
+    <ol class="notice-list">
+      <li>Crear un correo de uso único y exclusivo para la TV o la app.</li>
+      <li>Vincular ese correo a la app desde un celular para obtener número de cuenta y clave.</li>
+    </ol>
+  </div>
+
+  <!-- BANNER ANUNCIO TOP (Espacio negro de arriba) -->
   <div class="ad-slot" id="ad-top">
     <!-- Pega aquí el código del Banner 1 de Adsterra -->
   </div>
 
-  <!-- App 1 (Xuper APK) -->
+  <!-- Botón 1: XuperTV1 -->
   <div class="app-row">
-    <span class="app-name">Xuper APK</span>
-    <a href="app1.apk" class="btn-download" download>Descargar</a>
+    <span class="app-name">XuperTV1</span>
+    <a href="xupertv1.apk" class="btn-download" download>Descargar</a>
   </div>
 
-  <!-- App 2 -->
+  <!-- Botón 2: XuperTV2 -->
   <div class="app-row">
-    <span class="app-name">App 2</span>
-    <a href="app2.apk" class="btn-download" download>Descargar</a>
-  </div>
-
-  <!-- App 3 -->
-  <div class="app-row">
-    <span class="app-name">App 3</span>
-    <a href="app3.apk" class="btn-download" download>Descargar</a>
+    <span class="app-name">XuperTV2</span>
+    <a href="xupertv2.apk" class="btn-download" download>Descargar</a>
   </div>
 
   <!-- BANNER ANUNCIO MEDIO -->
@@ -51,16 +70,19 @@
     <!-- Pega aquí el código del Banner 2 de Adsterra -->
   </div>
 
-  <!-- App 4 -->
-  <div class="app-row">
-    <span class="app-name">App 4</span>
-    <a href="app4.apk" class="btn-download" download>Descargar</a>
-  </div>
+  <!-- PREGUNTAS FRECUENTES -->
+  <div class="faq-section">
+    <div class="faq-title">Preguntas Frecuentes</div>
 
-  <!-- App 5 -->
-  <div class="app-row">
-    <span class="app-name">App 5</span>
-    <a href="app5.apk" class="btn-download" download>Descargar</a>
+    <div class="faq-item">
+      <div class="faq-question">¿Cómo instalar en Smart TV / TV Box?</div>
+      <div class="faq-answer">Descarga el archivo APK directamente desde el navegador de tu TV o pásalo mediante una memoria USB e instálalo permitiendo 'Fuentes desconocidas'.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">¿Es seguro descargar desde aquí?</div>
+      <div class="faq-answer">Sí, todas las aplicaciones son verificadas y no requieren ningún tipo de registro en GitHub.</div>
+    </div>
   </div>
 
 </div>
