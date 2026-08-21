@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" translate=¨no¨>
+<html lang="es" translate="no">
 <head>
   <meta name="google" content="notranslate">
   <meta charset="UTF-8">
@@ -7,8 +7,28 @@
   <title>Centro de Descargas</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, sans-serif; background-color: #0f172a; color: #f8fafc; padding: 20px 10px; display: flex; justify-content: center; }
-    .container { width: 100%; max-width: 460px; background: #1e293b; padding: 20px 15px; border-radius: 12px; text-align: left; }
+    
+    body { 
+      font-family: system-ui, -apple-system, sans-serif; 
+      background-color: #0f172a; 
+      color: #f8fafc; 
+      padding: 20px 10px; 
+      display: flex; 
+      justify-content: center; 
+      position: relative;
+    }
+
+    /* Tu contenedor central de 460px */
+    .container { 
+      width: 100%; 
+      max-width: 460px; 
+      background: #1e293b; 
+      padding: 20px 15px; 
+      border-radius: 12px; 
+      text-align: left; 
+      position: relative;
+      z-index: 2; /* Mantiene la tarjeta sobre cualquier capa */
+    }
     
     h1 { font-size: 20px; font-weight: 700; color: #ffffff; text-align: center; margin-bottom: 8px; }
     
@@ -23,7 +43,7 @@
     .btn-download { background: #22c55e; color: #ffffff; text-decoration: none; padding: 10px 18px; border-radius: 6px; font-weight: bold; font-size: 14px; display: inline-block; }
     .btn-download:active { background: #16a34a; }
 
-    /* Espacios para Anuncios */
+    /* Espacio ajustado para Anuncios Nativos o Banners */
     .ad-slot { margin: 15px 0; min-height: 60px; display: flex; justify-content: center; align-items: center; background: #0f172a; border-radius: 6px; overflow: hidden; }
 
     /* Preguntas Frecuentes */
@@ -32,9 +52,53 @@
     .faq-item { margin-bottom: 12px; }
     .faq-question { font-size: 14px; font-weight: 600; color: #f1f5f9; margin-bottom: 4px; }
     .faq-answer { font-size: 13px; color: #94a3b8; line-height: 1.4; }
+
+    /* CONTENEDORES LATERALES (Solo visibles si la pantalla mide más de 800px) */
+    .side-ad {
+      display: none;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 160px;
+      height: 600px;
+      z-index: 1;
+    }
+    .side-ad-left { left: calc(50% - 230px - 175px); }  /* Acomodado a la izquierda */
+    .side-ad-right { right: calc(50% - 230px - 175px); } /* Acomodado a la derecha */
+
+    @media (min-width: 800px) {
+      .side-ad { display: block; } /* En computadoras se muestran a los lados sin molestar el centro */
+    }
   </style>
 </head>
 <body>
+
+<!-- BANNERS LATERALES 160x600 (Izquierda y Derecha para PC) -->
+<div class="side-ad side-ad-left">
+  <script>
+    atOptions = {
+      'key' : '3de4e70b2b6dbe80cbe8fcb9d44b33fc',
+      'format' : 'iframe',
+      'height' : 600,
+      'width' : 160,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/3de4e70b2b6dbe80cbe8fcb9d44b33fc/invoke.js"></script>
+</div>
+
+<div class="side-ad side-ad-right">
+  <script>
+    atOptions = {
+      'key' : '3de4e70b2b6dbe80cbe8fcb9d44b33fc',
+      'format' : 'iframe',
+      'height' : 600,
+      'width' : 160,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/3de4e70b2b6dbe80cbe8fcb9d44b33fc/invoke.js"></script>
+</div>
 
 <div class="container">
 
@@ -49,18 +113,10 @@
     </ol>
   </div>
 
-  <!-- BANNER ANUNCIO TOP -->
+  <!-- ANUNCIO NATIVO ARRIBA DE LAS APPS -->
   <div class="ad-slot" id="ad-top">
-    <script>
-      atOptions = {
-        'key' : '8ed222aa6ea91d056f45235014cda790',
-        'format' : 'iframe',
-        'height' : 60,
-        'width' : 468,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/8ed222aa6ea91d056f45235014cda790/invoke.js"></script>
+    <script async="async" data-cfasync="false" src="https://pl30947420.effectivecpmnetwork.com/341060b47def36a7875e324dc15faccf/invoke.js"></script>
+    <div id="container-341060b47def36a7875e324dc15faccf"></div>
   </div>
 
   <!-- Botón 1: XuperTV1 -->
@@ -75,7 +131,7 @@
     <a href="https://github.com/SCPlay07/archive_apk/releases/download/v1.0/XuperTV2.apk" class="btn-download">Descargar</a>
   </div>
 
-  <!-- BANNER ANUNCIO MEDIO -->
+  <!-- BANNER ANUNCIO MEDIO (Conserva el original de 468x60 para no saturar de nativos) -->
   <div class="ad-slot" id="ad-middle">
     <script>
       atOptions = {
@@ -105,6 +161,9 @@
   </div>
 
 </div>
+
+<!-- SOCIAL BAR (Se maneja solo al final de la página sin alterar nada del HTML) -->
+<script src="https://pl30947444.effectivecpmnetwork.com/dc/9e/1a/dc9e1a5564c0c0ab0489d4603ba2a249.js"></script>
 
 </body>
 </html>
